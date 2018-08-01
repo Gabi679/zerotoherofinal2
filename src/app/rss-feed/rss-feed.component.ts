@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RssServiceService } from '../rss-service.service'
 
 @Component({
   selector: 'app-rss-feed',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rss-feed.component.css']
 })
 export class RssFeedComponent implements OnInit {
-
-  constructor() { }
+  data;
+  private feeds: any;
+  constructor(private rssService:RssServiceService) { }
 
   ngOnInit() {
+    console.log(this.rssService.getFeedContent());
+  }
   }
 
-}
+

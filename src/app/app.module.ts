@@ -8,6 +8,7 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { RssFeedComponent } from './rss-feed/rss-feed.component';
+import {HttpModule} from '@angular/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,6 +16,7 @@ import { RssFeedComponent } from './rss-feed/rss-feed.component';
     RssFeedComponent
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
