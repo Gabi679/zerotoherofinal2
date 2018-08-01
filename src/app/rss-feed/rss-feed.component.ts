@@ -7,12 +7,17 @@ import { RssServiceService } from '../rss-service.service'
   styleUrls: ['./rss-feed.component.css']
 })
 export class RssFeedComponent implements OnInit {
+  hasData=false;
   data;
   private feeds: any;
   constructor(private rssService:RssServiceService) { }
 
   ngOnInit() {
-    console.log(this.rssService.getFeedContent());
+    
+  }
+  load(){
+    this.data=this.rssService.getFeedContent();
+    this.hasData=true;
   }
   }
 
