@@ -10,7 +10,7 @@ export class RssServiceService {
   private rssToJsonServiceBaseUrl: string = 'https://rss2json.com/api.json?rss_url=';
 
   constructor(private http: Http) { }
-
+  //observable el kéne visszatérni de meghal ha hazsnálom...
   getFeedContent() {
     this.http.get(this.rssToJsonServiceBaseUrl + 'https://www.theverge.com/rss/index.xml').subscribe((data)=>{
       let data2=this.extractFeeds(data);
